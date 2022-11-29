@@ -12,8 +12,8 @@ pipeline {
         }
         stage ('second') {
             steps{
-                echo ${test}
-                echo ${test1}
+                sh "echo ${test}"
+                sh "echo ${test1}"
             }
         }    
         
