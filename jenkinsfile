@@ -7,9 +7,8 @@ pipeline {
     stages {
         stage ('first') {
             steps{
-                sh "rm -r workplace-local"
-                sh "git clone https://github.com/vkrishna77/workplace-local.git"
-                sh "curl test.html"    
+                sh "git fetch https://github.com/vkrishna77/workplace-local.git"
+                sh "jdk -v"    
             }
         }
         stage ('second') {
