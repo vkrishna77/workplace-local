@@ -9,12 +9,13 @@ pipeline {
             steps{
                 echo "hello world"    
             }
+        }
         stage ('second') {
             steps{
                 echo $test
                 echo $test1
             }
         }    
-        }
+        
     }
 }
