@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage ('first') {
             steps{
-                echo "hello world"    
+                git https://github.com/vkrishna77/workplace-local.git
+                cat test.html    
             }
         }
         stage ('second') {
