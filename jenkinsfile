@@ -1,11 +1,20 @@
 pipeline {
     agent any
+    environment {
+        test = 'hello'
+        test1 = 'world'
+    }
     stages {
         stage ('first') {
             steps{
                 echo "hello world"    
             }
-            
+        stage ('second') {
+            steps{
+                echo $test
+                echo $test1
+            }
+        }    
         }
     }
 }
