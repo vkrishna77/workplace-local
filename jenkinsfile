@@ -5,6 +5,7 @@ pipeline {
         test1 = 'world'
     }
     stages {
+        agent { label 'docker-1'}
         stage ('first') {
             steps{
                 sh "git fetch https://github.com/vkrishna77/workplace-local.git"
