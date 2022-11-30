@@ -8,7 +8,7 @@ pipeline {
         stage ('first') {
             steps{
                 sh "git fetch https://github.com/vkrishna77/workplace-local.git"
-                sh "java -v"    
+                sh "java -version"    
             }
         }
         stage ('second') {
