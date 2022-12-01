@@ -9,7 +9,9 @@ pipeline {
             agent { label 'docker-1'  }
             steps{
                 sh "git fetch https://github.com/vkrishna77/workplace-local.git"
-                sh "java -version"    
+                sh "java -version"
+                sh "javac helloworld.java"
+                sh "java helloworld"
             }
         }
         stage ('second') {
