@@ -6,9 +6,7 @@ pipeline {
     }
     stages {
         stage ('first') {
-            agent { 
-                docker { image 'jenkins/agent:alpine-jdk11' }
-            }
+            agent { label 'docker-1'  }
             steps{
                 sh "git fetch https://github.com/vkrishna77/workplace-local.git"
                 sh "java -version"    
