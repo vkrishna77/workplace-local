@@ -20,6 +20,13 @@ pipeline {
                 sh "echo ${test1}"
             }
         }    
+        stage ('third') {
+            agent { label 'docker-python'  }
+            steps{
+                sh "git fetch https://github.com/vkrishna77/workplace-local.git"
+                sh "python test.py"
+            }
+        }
         
     }
 }
