@@ -8,22 +8,22 @@ pipeline {
         stage ('first') {
             
             steps{
-                sh "git fetch https://github.com/vkrishna77/workplace-local.git"
-                sh "java -version"
-                sh "javac helloworld.java"
-                sh "java helloworld"
+                bat "git fetch https://github.com/vkrishna77/workplace-local.git"
+                bat "java -version"
+                bat "javac helloworld.java"
+                bat "java helloworld"
             }
         }
         stage ('second') {
             steps{
-                sh "echo ${test}"
-                sh "echo ${test1}"
+                bat "echo ${test}"
+                bat "echo ${test1}"
             }
         }    
         stage ('third') {
             steps{
-                sh "git fetch https://github.com/vkrishna77/workplace-local.git"
-                sh "python test.py"
+                bat "git fetch https://github.com/vkrishna77/workplace-local.git"
+                bat "python test.py"
             }
         }
         
