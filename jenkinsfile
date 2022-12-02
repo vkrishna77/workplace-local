@@ -6,7 +6,7 @@ pipeline {
     }
     stages {
         stage ('first') {
-            agent { label 'docker-1'  }
+            
             steps{
                 sh "git fetch https://github.com/vkrishna77/workplace-local.git"
                 sh "java -version"
@@ -21,7 +21,6 @@ pipeline {
             }
         }    
         stage ('third') {
-            agent { label 'docker-python'  }
             steps{
                 sh "git fetch https://github.com/vkrishna77/workplace-local.git"
                 sh "python test.py"
