@@ -15,9 +15,10 @@ pipeline {
             }
         }
         stage ('second') {
+            agent { label "azureagentssh" }
             steps{
-                bat "echo ${test}"
-                bat "echo ${test1}"
+                sh "echo ${test}"
+                sh "echo ${test1}"
             }
         }    
         stage ('third') {
