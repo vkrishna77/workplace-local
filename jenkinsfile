@@ -6,12 +6,12 @@ pipeline {
     }
     stages {
         stage ('first') {
-            
+            agent { label "azureagentssh" }
             steps{
-                bat "git fetch https://github.com/vkrishna77/workplace-local.git"
-                bat "java -version"
-                bat "javac helloworld.java"
-                bat "java helloworld"
+                sh "git fetch https://github.com/vkrishna77/workplace-local.git"
+                sh "java -version"
+                sh "javac helloworld.java"
+                sh "java helloworld"
             }
         }
         stage ('second') {
