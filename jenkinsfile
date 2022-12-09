@@ -25,6 +25,7 @@ pipeline {
             steps{
                 //bat "git fetch https://github.com/vkrishna77/workplace-local.git"
                 //bat "python test.py"
+                sh "echo hello"
             }
         }
         
