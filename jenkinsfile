@@ -6,7 +6,7 @@ pipeline {
     }
     stages {
         stage ('first') {
-            agent { label "azureagentssh" }
+            agent { label "testvmagent" }
             steps{
                 sh "java -version"
                 sh "javac helloworld.java"
@@ -14,7 +14,7 @@ pipeline {
             }
         }
         stage ('second') {
-            agent { label "azureagentssh" }
+            agent { label "testvmagent" }
             steps{
                 sh "echo ${test}"
                 sh "echo ${test1}"
